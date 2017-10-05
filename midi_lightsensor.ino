@@ -17,9 +17,9 @@ int analogPin1 = A1;//the analog input pin the light sensor2 is attached to
 int analogPin2 = A2;//the analog input pin the light sensor3 is attached to 
 int analogVal0 = 0;
 int analogVal1 = 0;
-int analogVal2 = 0;//3 different analog value that coming from 3 light sensors
-byte val0; //
-byte val1; //
+int analogVal2 = 0;//analog values from there sensors
+byte val0; 
+byte val1; 
 byte val2; //3 MIDI Message that have been mapped
 
 void setup() {
@@ -34,13 +34,13 @@ void loop() {
   //we have to scale the sensor data to fit between 0 and 127 (this is the range of MIDI notes)
   val0 = map(analogVal0, 0, 900, 40, 90);//Mapping the value which is 0-900 range I measured
   MIDImessage(noteON, val0, 100);
-  delay(100);
+  delay(100);//hold notes for 100ms
   val1 = map(analogVal1, 0, 900, 40, 90);//Mapping the value which is 0-900 range I measured
   MIDImessage(noteON, val1, 50);
-  delay(100);
+  delay(100);//hold notes for 100ms
   val2 = map(analogVal2, 0, 900, 40, 90);//Mapping the value which is 0-900 range I measured
   MIDImessage(noteON, val2, 100);
-  delay(100);
+  delay(100);//hold notes for 100ms
 
 }
 
