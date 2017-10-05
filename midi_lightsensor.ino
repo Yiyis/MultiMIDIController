@@ -4,7 +4,7 @@
  *
  * Group members: Roxolyana Shepko-Hamilton, Savaya Shinkaruk, Yiyi Shao
  *
- *
+ * we start from the example code from: http://www.instructables.com/id/Arduino-Sensors-and-MIDI/
  */
 
 
